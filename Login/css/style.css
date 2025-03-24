@@ -1,0 +1,372 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;1,300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,700;1,700&display=swap');
+
+
+* { /* Reset */
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+} 
+
+body {
+    font-family: 'Open Sans', sans-serif;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.container img {
+    width: 100%;
+    height: 100%;
+}
+
+.container .content {
+    justify-content: space-between;
+    align-items: center;
+    background-color: #fff;
+    width: 960px;
+    height: 60%;
+    position: absolute;
+    border-radius: 15px;
+    box-shadow: 0 0 15px rgb(141, 138, 138);
+}
+
+.container .content::before {
+    content: "";
+    position: absolute;
+    background-color: #08bcb6;
+    width: 40%;
+    height: 100%;
+    border-top-left-radius: 15px;
+    border-bottom-left-radius: 15px;
+    
+    left: 0;
+}
+
+.container .primeiro-content {
+    display: flex;
+}
+
+.content .primeira-coluna {
+    text-align: center;
+    width: 40%;
+    z-index: 10;
+}
+
+.content .titulo {
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.content .primeiro-titulo {
+    color: #fff;
+}
+
+.content .segundo-titulo {
+    color: #08bcb6;
+}
+
+.content .descricao {
+    font-size: 14px;
+    font-weight: 300;
+    line-height: 30px;
+}
+
+.content .primeira-descricao {
+    color:#fff;
+}
+
+.content .segunda-descricao {
+    color: #7f8c8d;
+}
+
+.content .btn {
+    border-radius: 15px;
+    text-transform: uppercase;
+    color: #fff;
+    font-size: 10px;
+    padding: 10px 10px;
+    cursor: pointer;
+    font-weight: bold;
+    width: 150px;
+    align-self: center;
+    border: none;
+    margin-top: 1rem;
+}
+
+.content .primeiro-btn {
+    background-color: transparent;
+    border: 1px solid #fff;
+    transition: background-color .5s;
+}
+
+.content .primeiro-btn:hover {
+    background-color: #fff;
+    color: #08bcb6;
+}
+
+.content .segundo-btn {
+    background-color: #08bcb6;
+    border: 1px solid #08bcb6;
+    transition: background-color .5s;
+}
+
+.content .segundo-btn:hover {
+    color: #08bcb6;
+    background-color: #fff;
+    border: 1px solid #08bcb6;
+}
+
+
+.primeiro-content .segunda-coluna {
+    z-index: 11;
+}
+
+
+.segunda-coluna {
+    width: 60%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.midia-social {
+    margin: 1rem 0;
+}
+
+.lista-midia-social {
+    display: flex;
+    list-style-type: none;
+}
+
+.link-midia-social:not(:first-child) {
+    margin-left: 10px;
+} /* Estou pegando o primeiro item/filho da classe item-midia-social e dizendo pra não aplicar a margin-left nele*/
+
+.link-midia-social:hover .item-midia-social{
+    background-color: #08bcb6;
+    color: #fff;
+    border: 1px solid #08bcb6   ;
+}
+
+
+.item-midia-social {
+    border: 1px solid #bdc3c7;
+    border-radius: 50%;
+    width: 35px;
+    height: 35px;
+    line-height: 35px;
+    text-align: center;
+    color: #95a5a6;
+    transition: background-color .5s;
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+    width: 55%;
+}
+
+.form input {
+    height: 45px;
+    width: 100%;
+    border: none;
+    outline: none;
+    background-color: #ecf0f1;
+}
+
+.label-input {
+    background-color: #ecf0f1;
+    display: flex;
+    align-items: center;
+    margin: 8px;
+}
+
+.icone-modificador {
+    color: #08bcb6;
+    padding: 0 10px;
+}
+
+/* segundo-content*/
+
+.segundo-content {
+    display: absolute;
+    display: flex;
+}
+
+.segundo-content .primeira-coluna {
+    order: 2;
+    z-index: -1;
+}
+
+.segundo-content .segunda-coluna {
+    order: 1;
+    z-index: -2;
+}
+
+.password {
+    color: #34495e;
+    font-size: 14px;
+    margin: 15px 0;
+    text-align: center;
+}
+
+.password::first-letter {
+    text-transform: capitalize;
+}
+
+.sign-in-js .primeiro-content .primeira-coluna {
+    z-index: -1;
+}
+
+.sign-in-js .segundo-content .primeira-coluna {
+    z-index: 13;
+}
+
+.sign-in-js .segundo-content .segunda-coluna {
+    z-index: 11;
+}
+
+.sign-in-js .content::before {
+    left: 60%;
+    border-top-left-radius: 0px;
+    border-bottom-left-radius: 0px;
+    border-top-right-radius: 15px;
+    border-bottom-right-radius: 15px;
+    animation: slidein 1.3s;
+
+    z-index: 12;
+}
+
+.sign-up-js .content::before {
+    animation: slideout 1.3s;
+
+    z-index: 12;
+}
+
+.sign-up-js .segundo-content .primeira-coluna,
+.sign-up-js .segundo-content .segunda-coluna {
+    z-index: -1;
+}
+
+.sign-up-js .primeiro-content .segunda-coluna {
+    z-index: 11;
+}
+
+.sign-up-js .primeiro-content .primeira-coluna {
+    z-index: 13;
+} 
+
+/*DESLOCAMENTO CONTEÚDO ATRÁS DO CONTENT::BEFORE */
+.sign-in-js .primeiro-content .segunda-coluna {
+    z-index: -1;
+    position: relative;
+    animation: deslocamentoEsq 1.3s;
+}
+
+.sign-up-js .segundo-content .segunda-coluna {
+    position: relative;
+    z-index: -1;
+    animation: deslocamentoDif 1.3s;
+}
+
+
+/* ANIMAÇÃO CSS */
+@keyframes deslocamentoEsq {
+    from {
+        left: 0;
+        z-index: 12;
+    }
+
+    25% {
+        left: -85px;
+    }
+
+    50% {
+        left: -120px;
+    }
+
+    to {
+        left: -130px;
+        z-index: -1;
+    }
+}
+
+@keyframes deslocamentoDif {
+    from {
+        left: 0;
+        z-index: 12;
+    }
+
+    25% {
+        left: 75px;
+    }
+
+    50% {
+        left: 90px;
+    }
+
+    to {
+        left: 100px;
+        z-index: -1;
+    }
+}
+
+@keyframes slidein {
+    from {
+        left: 0;
+        width: 40%;
+    }
+
+    25% {
+        left: 5%;
+        width: 50%;
+    }
+
+    50% {
+        left: 25%;
+        width: 60%;
+    }
+
+    75% {
+        left: 45%;
+        width: 50%;
+    }
+
+    to {
+        left: 60%;
+        width: 40%;
+    }
+}
+
+@keyframes slideout {
+    from {
+        left: 60%;
+        width: 40%;
+    }
+
+    25% {
+        left: 45%;
+        width: 50%;
+    }
+
+    50% {
+        left: 25%;
+        width: 60%;
+    }
+
+    75% {
+        left: 5%;
+        width: 50%;
+    }
+
+    to {
+        left: 0%;
+        width: 40%;
+    }
+}
